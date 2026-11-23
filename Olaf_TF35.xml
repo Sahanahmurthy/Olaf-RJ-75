@@ -1,0 +1,40 @@
+<?xml version="1.0"?>
+<turbine_engine name="Olaf_TF35">
+  <milthrust> 13825.0 </milthrust>
+  <maxthrust> 13825.0 </maxthrust>
+  <bypassratio> 5.2 </bypassratio>
+  <tsfc> 0.58 </tsfc>
+  <atsfc> 0.58 </atsfc>
+  <bleed> 0.03 </bleed>
+  <idlen1> 28.0 </idlen1>
+  <idlen2> 58.0 </idlen2>
+  <maxn1> 100.0 </maxn1>
+  <maxn2> 100.0 </maxn2>
+  <augmented> 0 </augmented>
+  <injected> 0 </injected>
+  <function name="IdleThrust">
+    <table>
+      <independentVar lookup="row">velocities/mach</independentVar>
+      <independentVar lookup="column">atmosphere/density-altitude</independentVar>
+      <tableData>
+               0.0     15000.0   35000.0
+        0.0    0.045   0.040     0.035
+        0.5    0.025   0.022     0.020
+        0.85   0.015   0.015     0.018
+      </tableData>
+    </table>
+  </function>
+  <function name="MilThrust">
+    <table>
+      <independentVar lookup="row">velocities/mach</independentVar>
+      <independentVar lookup="column">atmosphere/density-altitude</independentVar>
+      <tableData>
+               0.0     15000.0   35000.0
+        0.0    1.000   0.650     0.320
+        0.4    0.840   0.560     0.275
+        0.78   0.760   0.510     0.240
+        0.85   0.730   0.490     0.230
+      </tableData>
+    </table>
+  </function>
+</turbine_engine>

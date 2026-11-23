@@ -1,0 +1,54 @@
+<?xml version="1.0"?>
+<PropertyList>
+  <sim>
+    <description>Olaf RJ-75 Supercritical Regional Jet</description>
+    <author>Sahana H Murthy</author>
+    <status>alpha</status>
+    <flight-model>jsb</flight-model>
+    <aero>Olaf_RJ75</aero>
+    <model>
+      <path>Models/Olaf_RJ75.xml</path>
+    </model>
+    <view n="0">
+      <name>Cockpit View</name>
+      <internal archive="y">true</internal>
+      <config>
+        <from-model type="bool">true</from-model>
+        <from-model-idx type="int">0</from-model-idx>
+        <x-offset-m archive="y">-0.48</x-offset-m>
+        <y-offset-m archive="y">2.15</y-offset-m>
+        <z-offset-m archive="y">-5.80</z-offset-m>
+        <pitch-offset-deg>-4.0</pitch-offset-deg>
+      </config>
+    </view>
+    <hud>
+      <enable3d n="1">true</enable3d>
+    </hud>
+    <flaps>
+      <setting>0.0</setting>
+      <setting>0.5</setting>
+      <setting>1.0</setting>
+    </flaps>
+  </sim>
+  <fdm>
+    <jsbsim>
+      <propulsion>
+        <set-running>-1</set-running>
+        <engine n="0"><set-running>1</set-running></engine>
+        <engine n="1"><set-running>1</set-running></engine>
+      </propulsion>
+    </jsbsim>
+  </fdm>
+  <controls>
+    <gear>
+      <brake-parking>0</brake-parking>
+    </gear>
+    <flight>
+      <flaps>0.5</flaps>
+    </flight>
+    <engines>
+      <engine n="0"><cutoff>false</cutoff></engine>
+      <engine n="1"><cutoff>false</cutoff></engine>
+    </engines>
+  </controls>
+</PropertyList>
